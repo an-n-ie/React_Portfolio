@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-
+import BulmaNav from './BulmaNav';
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
 
@@ -27,7 +27,8 @@ export default function PortfolioContainer() {
   return (
     <div>
       {/* We are passing the currentPage from state and the function to update it */}
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      {/* <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} /> */}
+      <BulmaNav currentPage={currentPage} handlePageChange={handlePageChange}/>
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
     </div>
